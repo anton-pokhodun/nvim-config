@@ -18,14 +18,20 @@ end)
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
-  ensure_installed = { 'lua_ls' },
+  ensure_installed = { 'lua_ls', 'solargraph', 'marksman', 'dockerls' },
   handlers = {
     lsp_zero.default_setup,
   },
 })
 
+require('lspconfig').dockerls.setup({})
+
+require('lspconfig').marksman.setup({})
+
+require('lspconfig').solargraph.setup({})
+
 require('lspconfig').lua_ls.setup {
-    on_attach = on_attach,
+    on_attach = lsp_zero.on_attach,
     settings = {
         Lua = {
             diagnostics = {
