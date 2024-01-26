@@ -54,7 +54,16 @@ return require('packer').startup(function(use)
       }
   }
 
-  use { 'mg979/vim-visual-multi', branch= 'master'}
-  use { "echasnovski/mini.nvim", branch = 'stable' }
-
+  use {
+      "AckslD/nvim-neoclip.lua",
+      requires = {
+          {'kkharji/sqlite.lua', module = 'sqlite'},
+          -- you'll need at least one of these
+          -- {'nvim-telescope/telescope.nvim'},
+          -- {'ibhagwan/fzf-lua'},
+      },
+      config = function()
+          require('neoclip').setup()
+      end,
+  }
 end)

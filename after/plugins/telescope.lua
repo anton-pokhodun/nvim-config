@@ -38,4 +38,3 @@ vim.keymap.set('n', '<leader>fg', "<cmd>lua require('telescope').extensions.live
 vim.keymap.set('n', '<leader>ch', builtin.command_history, {})
 
 
-
