@@ -1,10 +1,11 @@
 vim.g.mapleader = " "
 
 vim.opt.guicursor = ""
-
+vim.cmd[[colorscheme tokyonight-night]]
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
+vim.o.updatetime = 250
 
 vim.opt.nu = true
 vim.opt.relativenumber = true

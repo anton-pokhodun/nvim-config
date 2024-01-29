@@ -53,6 +53,10 @@ vim.keymap.set("n", "<C-S-Up>", ":resize -2<CR>", { desc = "Resize Horizontal Sp
 vim.keymap.set("n", "<C-S-Left>", ":vertical resize -2<CR>", { desc = "Resize Vertical Split Down" })
 vim.keymap.set("n", "<C-S-Right>", ":vertical resize +2<CR>", { desc = "Resize Vertical Split Up" })
 
+-- Commenter Keybinding
+vim.keymap.set("n", "<C-/>", ":CommentToggle<CR>", {})
+vim.keymap.set("v", "<C-/>", ":CommentToggle<CR>", {})
+
 -- Autocommands
 vim.api.nvim_create_augroup("custom_buffer", { clear = true })
 

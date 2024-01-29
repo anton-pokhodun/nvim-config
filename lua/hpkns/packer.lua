@@ -19,11 +19,10 @@ return require('packer').startup(function(use)
     end
   }
   use {
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    config = function()
-      vim.cmd('colorscheme rose-pine')
-    end
+      "folke/tokyonight.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {},
   }
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
@@ -53,7 +52,6 @@ return require('packer').startup(function(use)
           {'L3MON4D3/LuaSnip'},
       }
   }
-
   use {
       "AckslD/nvim-neoclip.lua",
       requires = {
@@ -66,4 +64,20 @@ return require('packer').startup(function(use)
           require('neoclip').setup()
       end,
   }
+  use {
+      'lewis6991/gitsigns.nvim',
+      requires = { 'nvim-lua/plenary.nvim' },
+      config = function()
+          require('gitsigns').setup { current_line_blame = true }
+      end
+  }
+  use {'ThePrimeagen/git-worktree.nvim'}
+  use {
+      "terrortylor/nvim-comment",
+      cmd = "CommentToggle",
+      config = function()
+          require("nvim_comment").setup()
+      end
+  }
+
 end)
