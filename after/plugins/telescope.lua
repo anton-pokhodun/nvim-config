@@ -33,7 +33,7 @@ vim.keymap.set('n', '<leader>fg', "<cmd>lua require('telescope').extensions.live
 vim.keymap.set('n', '<leader>gb', ":Telescope git_branches<CR>", { desc = 'Get git branches' })
 vim.keymap.set('n', '<leader>gc', ":Telescope git_commits<CR>", { desc = 'Git commits' })
 vim.keymap.set('n', '<leader>gs', ":Telescope git_status<CR>", { desc = 'Git status' })
-vim.keymap.set("n", "<Leader>gw", "<CMD>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>", {})
+vim.keymap.set("n", "<Leader>xir", "<CMD>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>", {})
 --vim.keymap.set('n', '<leader>fs', function() 
 --  builtin.grep_string({ search = vim.fn.input("Grep > ") })
 --end);

@@ -79,8 +79,12 @@ return require('packer').startup(function(use)
           require("nvim_comment").setup()
       end
   }
+  -- Nerdtree and plugins
   use('preservim/nerdtree')
   use('ryanoasis/vim-devicons')
   use('Xuyuanp/nerdtree-git-plugin')
+
+  -- Tabs
+  use('romgrk/barbar.nvim')
 
 end)

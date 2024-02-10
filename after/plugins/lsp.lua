@@ -24,8 +24,6 @@ require('mason-lspconfig').setup({
   },
 })
 
-require('lspconfig').ruby_ls.setup({})
-
 require('lspconfig').dockerls.setup({})
 
 require('lspconfig').marksman.setup({})
