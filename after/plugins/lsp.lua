@@ -18,11 +18,13 @@ end)
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
-  ensure_installed = { 'lua_ls', 'solargraph', 'marksman', 'dockerls', 'yamlls' },
+  ensure_installed = { 'lua_ls', 'ruby_ls', 'solargraph', 'marksman', 'dockerls', 'yamlls' },
   handlers = {
     lsp_zero.default_setup,
   },
 })
+
+require('lspconfig').ruby_ls.setup({})
 
 require('lspconfig').dockerls.setup({})
 
