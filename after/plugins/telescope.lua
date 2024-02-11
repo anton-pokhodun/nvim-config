@@ -3,22 +3,28 @@ local lga_actions = require("telescope-live-grep-args.actions")
 local builtin = require('telescope.builtin')
 
 telescope.setup {
-  extensions = {
-    live_grep_args = {
-      auto_quoting = true, -- enable/disable auto-quoting
-      -- define mappings, e.g.
-      mappings = { -- extend mappings
-        i = {
-          ["<C-k>"] = lga_actions.quote_prompt(),
-          ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+    defaults = {
+        hidden = true,
+        no_ignore = false,
+        show_preview = true,
+        file_ignore_patterns = {".git/", ".cache", "node%_modules/.*"},
+    },
+    extensions = {
+        live_grep_args = {
+            auto_quoting = true, -- enable/disable auto-quoting
+            -- define mappings, e.g.
+            mappings = { -- extend mappings
+            i = {
+                ["<C-k>"] = lga_actions.quote_prompt(),
+                ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+            },
         },
-      },
-      -- ... also accepts theme settings, for example:
-      -- theme = "dropdown", -- use dropdown theme
-      -- theme = { }, -- use own theme spec
-      -- layout_config = { mirror=true }, -- mirror preview pane
+        -- ... also accepts theme settings, for example:
+        -- theme = "dropdown", -- use dropdown theme
+        -- theme = { }, -- use own theme spec
+        -- layout_config = { mirror=true }, -- mirror preview pane
     }
-  }
+}
 }
 
 
@@ -33,6 +39,8 @@ vim.keymap.set('n', '<leader>gb', ":Telescope git_branches<CR>", { desc = 'Get g
 vim.keymap.set('n', '<leader>gc', ":Telescope git_commits<CR>", { desc = 'Git commits' })
 vim.keymap.set('n', '<leader>gs', ":Telescope git_status<CR>", { desc = 'Git status' })
 vim.keymap.set("n", "<Leader>xir", "<CMD>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>", {})
+vim.keymap.set("n", "<leader>fd", "<cmd>Telescope dir live_grep<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>pd", "<cmd>Telescope dir find_files<CR>", { noremap = true, silent = true })
 --vim.keymap.set('n', '<leader>fs', function() 
 --  builtin.grep_string({ search = vim.fn.input("Grep > ") })
 --end);
