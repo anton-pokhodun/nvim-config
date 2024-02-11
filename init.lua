@@ -10,4 +10,5 @@ require("after.plugins.undotree")
 require("after.plugins.fugitive")
 require("after.plugins.lsp")
 require("after.plugins.gitsigns")
+require("after.plugins.barbar")
 
