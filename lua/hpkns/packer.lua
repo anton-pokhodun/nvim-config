@@ -86,5 +86,16 @@ return require('packer').startup(function(use)
 
   -- Tabs
   use('romgrk/barbar.nvim')
+  use('nvim-tree/nvim-web-devicons')
+
+  use {
+      'rmagatti/auto-session',
+      config = function()
+          require("auto-session").setup {
+              log_level = "error",
+              auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
+          }
+      end
+  }
 
 end)
