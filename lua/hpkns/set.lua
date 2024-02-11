@@ -41,5 +41,10 @@ vim.api.nvim_set_option("clipboard", "unnamed")
 --vim.opt.breakindent = true
 --vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
-vim.opt.wildignore:append({ "*/node_modules/*", "*/target/*" })
+vim.opt.wildignore:append({ "*/node_modules/*", "*/target/*", "*/auto-session-cache/*" })
 vim.opt.mouse = ""
+
+vim.g.auto_session_root_dir = "~/.config/nvim/auto-session-cache/"
+
+vim.g.NERDTreeShowHidden=1
+vim.g.NERDTreeMouseMode=2

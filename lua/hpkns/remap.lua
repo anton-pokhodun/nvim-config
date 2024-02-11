@@ -29,10 +29,6 @@ end, opts)
 keymap.set("n", "<leader>cf", "<cmd>let @+ = expand(\"%\")<CR>", { desc = "Copy File Name" })
 keymap.set("n", "<leader>cp", "<cmd>let @+ = expand(\"%:p\")<CR>", { desc = "Copy File Path" })
 
-keymap.set("n", "<leader><leader>", function()
-  vim.cmd("so")
-end, { desc = "Source current file" })
-
 -- Resize with arrows
 keymap.set("n", "<C-S-Down>", ":resize +2<CR>", { desc = "Resize Horizontal Split Down" })
 keymap.set("n", "<C-S-Up>", ":resize -2<CR>", { desc = "Resize Horizontal Split Up" })
@@ -52,19 +48,8 @@ local map = vim.api.nvim_set_keymap
 -- Move to previous/next
 map('n', '<C-,>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<C-;>', '<Cmd>BufferNext<CR>', opts)
-
--- Pin/unpin buffer
--- map('n', '<C-p>', '<Cmd>BufferPin<CR>', opts)
 -- Close buffer
 map('n', '<C-w>', '<Cmd>BufferClose<CR>', opts)
--- Wipeout buffer
---                 :BufferWipeout
--- Close commands
---                 :BufferCloseAllButCurrent
---                 :BufferCloseAllButPinned
---                 :BufferCloseAllButCurrentOrPinned
---                 :BufferCloseBuffersLeft
---                 :BufferCloseBuffersRight
 -- Magic buffer-picking mode
 map('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
 

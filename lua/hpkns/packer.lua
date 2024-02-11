@@ -12,7 +12,8 @@ return require('packer').startup(function(use)
     tag = '0.1.5',
     requires = {
         'nvim-lua/plenary.nvim',
-        'nvim-telescope/telescope-live-grep-args.nvim'
+        'nvim-telescope/telescope-live-grep-args.nvim',
+        'sharkdp/fd'
     },
     config = function()
         require("telescope").load_extension("live_grep_args")
