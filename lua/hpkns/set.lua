@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
+vim.g.WebDevIconsUnicodeDecorateFolderNodes = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 vim.opt.guicursor = ""
@@ -11,7 +11,6 @@ vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 vim.o.updatetime = 250
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 4
@@ -34,7 +33,7 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.g.netrw_banner = 0
 vim.api.nvim_set_option("clipboard", "unnamed")
---vim.opt.showcmd = true
+vim.opt.showcmd = true
 --vim.opt.cmdheight = 1
 --vim.opt.laststatus = 2
 --vim.opt.breakindent = true
@@ -51,4 +50,8 @@ vim.api.nvim_create_autocmd(
   "TextYankPost",
   { command = "silent! lua vim.highlight.on_yank()", group = "HighlightYank" }
 )
+vim.api.nvim_create_augroup("ActionOnClose", {})
+vim.api.nvim_create_autocmd("BufEnter", {
+    command = "autocmd VimEnter * NERDTree", group = "ActionOnClose"
+})
 

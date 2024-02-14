@@ -19,7 +19,6 @@ telescope.setup {
                 }
             },
             hidden = true,
-            sorting_strategy = "ascending",
             layout_strategy = "horizontal",
             no_ignore = false,
             show_preview = true,
