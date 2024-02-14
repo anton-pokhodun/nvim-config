@@ -30,7 +30,6 @@ vim.opt.ignorecase = true
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.g.netrw_banner = 0
@@ -46,5 +45,10 @@ vim.opt.mouse = ""
 
 vim.g.auto_session_root_dir = "~/.config/nvim/auto-session-cache/"
 
-vim.g.NERDTreeShowHidden=1
-vim.g.NERDTreeMouseMode=2
+-- Highlight yanked
+vim.api.nvim_create_augroup("HighlightYank", {})
+vim.api.nvim_create_autocmd(
+  "TextYankPost",
+  { command = "silent! lua vim.highlight.on_yank()", group = "HighlightYank" }
+)
+

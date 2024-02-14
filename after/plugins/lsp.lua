@@ -4,23 +4,23 @@ lsp_zero.on_attach(function(_, bufnr)
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = bufnr, desc = "Go to the definition" })
     vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = bufnr, desc = "LSP Hover" })
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = bufnr, desc = "Go to Implementation" })
-    vim.keymap.set("n", "<cmd>[", vim.diagnostic.goto_prev, { buffer = bufnr, desc = "Go to Next Diagnostic" })
     vim.keymap.set("n", "gl", vim.diagnostic.open_float, { buffer = bufnr, desc = "Open Diagnostic Float" })
-    vim.keymap.set("n", "<cmd>[", vim.diagnostic.goto_next, { buffer = bufnr, desc = "Go to Previous Diagnostic" })
-
+    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { buffer = bufnr, desc = "Go to Next Diagnostic" })
+    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { buffer = bufnr, desc = "Go to Previous Diagnostic" })
+    vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, {})
+    vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, {})
 
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-
 -- to learn how to use mason.nvim with lsp-zero
 -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
-  ensure_installed = { 'lua_ls', 'ruby_ls', 'solargraph', 'marksman', 'dockerls', 'yamlls' },
+  ensure_installed = { 'lua_ls', 'ruby_ls', 'bashls', 'solargraph', 'marksman', 'dockerls', 'yamlls' },
   handlers = {
     lsp_zero.default_setup,
   },
@@ -31,6 +31,8 @@ require('lspconfig').dockerls.setup({})
 require('lspconfig').marksman.setup({})
 
 require('lspconfig').solargraph.setup({})
+
+require('lspconfig').bashls.setup({})
 
 require('lspconfig').yamlls.setup({})
 

@@ -28,6 +28,8 @@ keymap.set("n", "<C-S-Down>", ":resize +2<CR>", { desc = "Resize Horizontal Spli
 keymap.set("n", "<C-S-Up>", ":resize -2<CR>", { desc = "Resize Horizontal Split Up" })
 keymap.set("n", "<C-S-Right>", ":vertical resize -2<CR>", { desc = "Resize Vertical Split Down" })
 keymap.set("n", "<C-S-Left>", ":vertical resize +2<CR>", { desc = "Resize Vertical Split Up" })
+-- Execute current file
+keymap.set("n", "<F9>", ":!%:p<CR>", { desc = "Execute current bash file" })
 -- Commenter Keybinding
 keymap.set("n", "<C-/>", ":CommentToggle<CR>", {})
 keymap.set("v", "<C-/>", ":CommentToggle<CR>", {})
@@ -44,3 +46,4 @@ map('n', '<C-w>', '<Cmd>BufferClose<CR>', opts)
 -- Magic buffer-picking mode
 map('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
 
+keymap.set("n", "<leader><leader>", ":wa<CR>", { desc = "Save all" })
