@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/antonpokhodun/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/Users/antonpokhodun/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/Users/antonpokhodun/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/Users/antonpokhodun/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/antonpokhodun/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
+local package_path_str = "/Users/apokhodun/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/Users/apokhodun/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/Users/apokhodun/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/Users/apokhodun/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/apokhodun/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,79 +76,79 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["auto-session"] = {
-    config = { "\27LJ\2\n”\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\5\0\0\a~/\15~/Projects\16~/Downloads\6/\1\0\1\14log_level\nerror\nsetup\17auto-session\frequire\0" },
+    config = { "\27LJ\2\nï¿½\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\5\0\0\a~/\15~/Projects\16~/Downloads\6/\1\0\1\14log_level\nerror\nsetup\17auto-session\frequire\0" },
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/auto-session",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/auto-session",
     url = "https://github.com/rmagatti/auto-session"
   },
   ["barbar.nvim"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["dir-telescope.nvim"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/dir-telescope.nvim",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/dir-telescope.nvim",
     url = "https://github.com/princejoogie/dir-telescope.nvim"
   },
   fd = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/fd",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/fd",
     url = "https://github.com/sharkdp/fd"
   },
   ["git-worktree.nvim"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/git-worktree.nvim",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/git-worktree.nvim",
     url = "https://github.com/ThePrimeagen/git-worktree.nvim"
   },
   ["gitsigns.nvim"] = {
     config = { "\27LJ\2\nQ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\23current_line_blame\2\nsetup\rgitsigns\frequire\0" },
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   harpoon = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/harpoon",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
   nerdtree = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/nerdtree",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/preservim/nerdtree"
   },
   ["nerdtree-git-plugin"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/nerdtree-git-plugin",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/nerdtree-git-plugin",
     url = "https://github.com/Xuyuanp/nerdtree-git-plugin"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-comment"] = {
@@ -157,76 +157,76 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/opt/nvim-comment",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/opt/nvim-comment",
     url = "https://github.com/terrortylor/nvim-comment"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-neoclip.lua"] = {
     config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fneoclip\frequire\0" },
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/nvim-neoclip.lua",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/nvim-neoclip.lua",
     url = "https://github.com/AckslD/nvim-neoclip.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   playground = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/playground",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/playground",
     url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["sqlite.lua"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/opt/sqlite.lua",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/opt/sqlite.lua",
     url = "https://github.com/kkharji/sqlite.lua"
   },
   ["telescope-live-grep-args.nvim"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/telescope-live-grep-args.nvim",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/telescope-live-grep-args.nvim",
     url = "https://github.com/nvim-telescope/telescope-live-grep-args.nvim"
   },
   ["telescope.nvim"] = {
     config = { "\27LJ\2\nS\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\19live_grep_args\19load_extension\14telescope\frequire\0" },
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
   undotree = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/undotree",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
   ["vim-airline"] = {
     loaded = true,
-    path = "/Users/antonpokhodun/.local/share/nvim/site/pack/packer/start/vim-airline",
+    path = "/Users/apokhodun/.local/share/nvim/site/pack/packer/start/vim-airline",
     url = "https://github.com/vim-airline/vim-airline"
   },
   ["vim-airline-themes"] = {
@@ -277,7 +277,7 @@ end
 
 -- Config for: auto-session
 time([[Config for auto-session]], true)
-try_loadstring("\27LJ\2\n”\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\5\0\0\a~/\15~/Projects\16~/Downloads\6/\1\0\1\14log_level\nerror\nsetup\17auto-session\frequire\0", "config", "auto-session")
+try_loadstring("\27LJ\2\nï¿½\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\5\0\0\a~/\15~/Projects\16~/Downloads\6/\1\0\1\14log_level\nerror\nsetup\17auto-session\frequire\0", "config", "auto-session")
 time([[Config for auto-session]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)

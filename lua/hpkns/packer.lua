@@ -25,6 +25,15 @@ return require('packer').startup(function(use)
       requires = {"nvim-telescope/telescope.nvim"},
   })
   use {
+      'crusj/bookmarks.nvim',
+      branch = 'main',
+      requires = { 'kyazdani42/nvim-web-devicons' },
+      config = function()
+          require("bookmarks").setup()
+          require("telescope").load_extension("bookmarks")
+      end
+  }
+  use {
       "folke/tokyonight.nvim",
       lazy = false,
       priority = 1000,
@@ -103,7 +112,15 @@ return require('packer').startup(function(use)
           }
       end
   }
+  use ('lovesegfault/beautysh')
+  use ('itspriddle/vim-shellcheck')
 
+  -- Pair brackets
+  use {
+      "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
+  
   -- use {
   --     'VonHeikemen/fine-cmdline.nvim',
   --     requires = {

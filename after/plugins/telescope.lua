@@ -41,7 +41,9 @@ telescope.setup {
 
         },
         pickers = {
-            current_buffer_fuzzy_find = { sorting_strategy = 'descending' },
+            find_files = {
+                hidden = true
+            },
         },
         extensions = {
             live_grep_args = {

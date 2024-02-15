@@ -32,8 +32,6 @@ require('lspconfig').marksman.setup({})
 
 require('lspconfig').solargraph.setup({})
 
-require('lspconfig').bashls.setup({})
-
 require('lspconfig').yamlls.setup({})
 
 require('lspconfig').lua_ls.setup {

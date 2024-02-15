@@ -47,3 +47,4 @@ map('n', '<C-w>', '<Cmd>BufferClose<CR>', opts)
 map('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
 
 keymap.set("n", "<leader><leader>", ":wa<CR>", { desc = "Save all" })
+keymap.set("n", "<leader>q", ":q<CR>", { desc = "Close the buffer" })
