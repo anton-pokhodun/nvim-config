@@ -12,6 +12,20 @@ telescope.setup {
         --     }
         -- },
         defaults = {
+            vimgrep_arguments = {
+                'rg',
+                '--color=never',
+                '--no-heading',
+                '--with-filename',
+                '--line-number',
+                '--column',
+                '--smart-case',
+                '--no-ignore-vcs',
+                '--hidden',
+                '--ignore-file',
+                '.gitignore'
+            },
+            sorting_strategy = "ascending",
             mappings = {
                 i = {
                     ['<C-k>'] = actions.preview_scrolling_up,
@@ -23,7 +37,7 @@ telescope.setup {
             no_ignore = false,
             show_preview = true,
             color_devicons = true,
-            file_ignore_patterns = {".git/", ".cache", "node_modules/.*", "packer_compiled.lua"},
+            file_ignore_patterns = {".git/", ".idea/*", "vendor/.*", ".cache", "node_modules/.*", "packer_compiled.lua"},
             layout_config = {
                 horizontal = {
                     prompt_position = "top",

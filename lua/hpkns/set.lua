@@ -3,10 +3,11 @@ vim.g.mapleader = " "
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.WebDevIconsUnicodeDecorateFolderNodes = 1
+vim.g.NERDTreeShowHidden=1
 -- set termguicolors to enable highlight groups
-vim.opt.termguicolors = true
+-- vim.opt.termguicolors = true
 vim.opt.guicursor = ""
-vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd[[colorscheme tokyonight-moon]]
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
