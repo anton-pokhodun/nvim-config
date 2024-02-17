@@ -4,6 +4,9 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.WebDevIconsUnicodeDecorateFolderNodes = 1
 vim.g.NERDTreeShowHidden=1
+vim.g.undotree_WindowLayout=1
+vim.g.undotree_SplitWidth=30
+vim.g.undotree_DiffAutoOpen=1
 -- set termguicolors to enable highlight groups
 -- vim.opt.termguicolors = true
 vim.opt.guicursor = ""
