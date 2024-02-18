@@ -4,6 +4,7 @@ local opts = { noremap = true, silent = true }
 local builtin = require('telescope.builtin')
 
 keymap.set("n", "<leader>nt", ":NERDTreeToggle<CR>")
+keymap.set("n", "<leader>nf", ":NERDTreeFind<CR>", { desc = "Find currently opened file in directory tree" })
 
 -- Delete work backward
 keymap.set("n", "dw", 'vb"_d')
