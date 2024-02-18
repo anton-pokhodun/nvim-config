@@ -8,7 +8,7 @@ vim.g.undotree_WindowLayout=1
 vim.g.undotree_SplitWidth=30
 vim.g.undotree_DiffAutoOpen=1
 -- set termguicolors to enable highlight groups
--- vim.opt.termguicolors = true
+vim.opt.termguicolors = true
 vim.opt.guicursor = ""
 vim.cmd[[colorscheme tokyonight-moon]]
 vim.scriptencoding = "utf-8"
@@ -38,10 +38,6 @@ vim.opt.colorcolumn = "80"
 vim.g.netrw_banner = 0
 vim.api.nvim_set_option("clipboard", "unnamed")
 vim.opt.showcmd = true
---vim.opt.cmdheight = 1
---vim.opt.laststatus = 2
---vim.opt.breakindent = true
---vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*", "*/target/*", "*/auto-session-cache/*" })
 vim.opt.mouse = ""
