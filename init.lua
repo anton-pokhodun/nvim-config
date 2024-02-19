@@ -14,4 +14,5 @@ require("after.plugins.barbar")
 require("after.plugins.auto-session")
 require("after.plugins.neoclip")
 require("after.plugins.bookmark")
+require("after.plugins.cmp")
 
