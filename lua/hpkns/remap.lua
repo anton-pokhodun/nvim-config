@@ -66,5 +66,5 @@ keymap('n', '<C-;>', '<Cmd>BufferNext<CR>', opts)
 -- Close buffer
 keymap('n', '<C-w>', '<Cmd>BufferClose<CR>', opts)
 keymap('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
-keymap('n', '<leader>ca', '<Cmd>BufferCloseAllButCurrent<CR>', opts)
+keymap('n', '<leader>cc', '<Cmd>BufferCloseAllButCurrent<CR>', opts)
 
