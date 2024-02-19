@@ -40,7 +40,14 @@ vim.api.nvim_set_option("clipboard", "unnamed")
 vim.opt.showcmd = true
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*", "*/target/*", "*/auto-session-cache/*" })
-vim.opt.mouse = ""
+vim.opt.mouse = "a"
+vim.opt.updatetime = 300
+vim.opt.cursorline = true
+vim.opt.numberwidth = 4
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
 
 vim.g.auto_session_root_dir = "~/.config/nvim/auto-session-cache/"
 
@@ -51,7 +58,5 @@ vim.api.nvim_create_autocmd(
   { command = "silent! lua vim.highlight.on_yank()", group = "HighlightYank" }
 )
 vim.api.nvim_create_augroup("ActionOnClose", {})
-vim.api.nvim_create_autocmd("BufEnter", {
-    command = "autocmd VimEnter * NERDTree", group = "ActionOnClose"
-})
+vim.api.nvim_create_autocmd("BufEnter", { command = "autocmd VimEnter * NERDTree", group = "ActionOnClose"})
 
