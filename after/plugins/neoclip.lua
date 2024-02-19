@@ -56,4 +56,4 @@ require('neoclip').setup({
 })
 
 vim.keymap.set("n",  "<C-S-v>", "<cmd>Telescope neoclip<CR>", { desc = "Telescope Neoclip"})
- 
+
