@@ -49,7 +49,7 @@ vim.opt.linebreak = true
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 
-vim.g.auto_session_root_dir = "~/.config/nvim/auto-session-cache/"
+vim.g.auto_session_root_dir = "~/auto-session-cache/"
 
 -- Highlight yanked
 vim.api.nvim_create_augroup("HighlightYank", {})
