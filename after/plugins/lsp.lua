@@ -1,16 +1,21 @@
 local lsp_zero = require('lsp-zero')
 local lspconfig = require('lspconfig')
 local util = require("lspconfig.util")
-local configs = require("lspconfig.configs")
+
+local servers = {
+    'lua_ls',
+    'ruby_ls',
+    'bashls', 
+    'solargraph',
+    'marksman',
+    'dockerls',
+    'yamlls'
+}
 
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
-    callback = function(ev)
-        -- Enable completion triggered by <c-x><c-o>
+   callback = function(ev)
         vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
-
-        -- Buffer local mappings.
-        -- See `:help vim.lsp.*` for documentation on any of the below functions
         local opts = { buffer = ev.buf }
         vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, opts)
         vim.keymap.set('n', 'gb', vim.lsp.buf.definition, opts)
@@ -36,7 +41,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
-    ensure_installed = { 'lua_ls', 'ruby_ls', 'bashls', 'solargraph', 'marksman', 'dockerls', 'yamlls' },
+    ensure_installed = servers,
     handlers = {
         lsp_zero.default_setup,
     },
