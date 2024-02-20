@@ -58,5 +58,5 @@ vim.api.nvim_create_autocmd(
   { command = "silent! lua vim.highlight.on_yank()", group = "HighlightYank" }
 )
 vim.api.nvim_create_augroup("ActionOnClose", {})
-vim.api.nvim_create_autocmd("BufEnter", { command = "autocmd VimEnter * NERDTree", group = "ActionOnClose"})
+-- vim.api.nvim_create_autocmd("BufEnter", { command = "autocmd VimEnter * NERDTree", group = "ActionOnClose"})
 

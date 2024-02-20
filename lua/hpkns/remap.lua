@@ -66,6 +66,7 @@ keymap("n", "<leader>fo", builtin.oldfiles, { noremap = true, silent = true })
 -- Tabs
 keymap('n', '<C-,>', '<Cmd>BufferPrevious<CR>', opts)
 keymap('n', '<C-;>', '<Cmd>BufferNext<CR>', opts)
+
 -- Close buffer
 keymap('n', '<C-w>', '<Cmd>BufferClose<CR>', opts)
 keymap('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
