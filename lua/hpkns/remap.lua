@@ -22,6 +22,9 @@ keymap("n", "sk", "<C-w>k")
 keymap("n", "sj", "<C-w>j")
 keymap("n", "sl", "<C-w>l")
 
+-- Call out neoclip
+vim.keymap.set("n",  "<C-S-v>", "<cmd>Telescope neoclip<CR>", { desc = "Telescope Neoclip"})
+
 -- Diagnostics
 keymap("n", "<C-j>", function() vim.diagnostic.goto_next() end, opts)
 
