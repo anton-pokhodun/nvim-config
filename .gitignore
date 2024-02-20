@@ -1,3 +1,4 @@
 .git
 auto-session-cache/
 plugin/packer_compiled.lua
+after/plugins/.DS_Store
