@@ -72,3 +72,7 @@ keymap('n', '<C-w>', '<Cmd>BufferClose<CR>', opts)
 keymap('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
 keymap('n', '<leader>cc', '<Cmd>BufferCloseAllButCurrent<CR>', opts)
 
+-- Git conflicts
+keymap("n", "gu", "<cmd>diffget //2<CR>")
+keymap("n", "gh", "<cmd>diffget //3<CR>")
+--
