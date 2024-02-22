@@ -44,6 +44,13 @@ local kind_icons = {
 	Misc = " ",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
+cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+        { name = 'cmdline' },
+        { name = 'path' }
+    }
+})
 
 cmp.setup {
   snippet = {
@@ -111,6 +118,7 @@ cmp.setup {
   },
   sources = {
     { name = "nvim_lsp" },
+    -- { name = "cmdline"},
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
