@@ -44,7 +44,7 @@ keymap("n", "<F9>", ":!%:p<CR>", { desc = "Execute current bash file" })
 -- Commenter Keybinding
 keymap("n", "<C-/>", ":CommentToggle<CR>", {})
 keymap("n", "<leader><leader>", ":wa<CR>", { desc = "Save all" })
-keymap("n", "<leader>q", ":q<CR>", { desc = "Close the buffer" })
+keymap("n", "<leader>q", ":BufferClose<CR>", { desc = "Close the buffer" })
 keymap("n", "<leader>gb", ":G blame<CR>", { desc = "Open git blame" })
 keymap("v", "<C-/>", ":CommentToggle<CR>", {})
 
