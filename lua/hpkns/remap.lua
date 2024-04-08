@@ -76,3 +76,10 @@ keymap('n', '<leader>cc', '<Cmd>BufferCloseAllButCurrent<CR>', opts)
 keymap("n", "gu", "<cmd>diffget //2<CR>")
 keymap("n", "gh", "<cmd>diffget //3<CR>")
 --
+keymap("n", "<leader>do", ":DiffviewOpen<CR>")
+keymap("n", "<leader>dh", ":DiffviewFileHistory %<CR>")
+keymap("n", "<leader>dm", ":DiffviewFileHistory --range=HEAD..origin/master<CR>")
+keymap("n", "<leader>dc", ":DiffviewClose<CR>")
+keymap("n", "<Tab><Tab>b", ":BookmarksListAll<CR>")
+keymap("n", "<Tab><Tab>m", ":MarksListAll<CR>")
+

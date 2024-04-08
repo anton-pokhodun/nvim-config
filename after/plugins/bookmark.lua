@@ -1,25 +1,59 @@
-require("bookmarks").setup({
-    storage_dir = "",  -- Default path: vim.fn.stdpath("data").."/bookmarks,  if not the default directory, should be absolute path",
-    mappings_enabled = true, -- If the value is false, only valid for global keymaps: toggle、add、delete_on_virt、show_desc
-    keymap = {
-        toggle = "<tab><tab>", -- Toggle bookmarks(global keymap)
-        add = "<leader>mm", -- Add bookmarks(global keymap)
-        jump = "<CR>", -- Jump from bookmarks(buf keymap)
-        delete = "dd", -- Delete bookmarks(buf keymap)
-        order = "<space><space>", -- Order bookmarks by frequency or updated_time(buf keymap)
-        delete_on_virt = "\\dd", -- Delete bookmark at virt text line(global keymap)
-        show_desc = "\\sd", -- show bookmark desc(global keymap)
-        focus_tags = "<C-m>",      -- focus tags window
-        focus_bookmarks = "<S-m>", -- focus bookmarks window
-        toogle_focus = "<S-Tab>", -- toggle window focus (tags-window <-> bookmarks-window)
-    },
-    virt_text = "", -- Show virt text at the end of bookmarked lines, if it is empty, use the description of bookmarks instead.
-    sign_icon = "󰃃",                                           -- if it is not empty, show icon in signColumn.
-    virt_pattern = { "*.go", "*.lua", "*.sh", "*.php", "*.rs" }, -- Show virt text only on matched pattern
-    virt_ignore_pattern = {}, -- Ignore showing virt text on matched pattern, this works after virt_pattern
-    border_style = "single", -- border style: "single", "double", "rounded" 
-    hl = {
-        border = "TelescopeBorder", -- border highlight
-        cursorline = "guibg=Gray guifg=White", -- cursorline highlight
-    }
-})
+require'marks'.setup {
+  -- whether to map keybinds or not. default true
+  default_mappings = true,
+  -- which builtin marks to show. default {}
+  builtin_marks = { ".", "<", ">", "^" },
+  -- whether movements cycle back to the beginning/end of buffer. default true
+  cyclic = true,
+  -- whether the shada file is updated after modifying uppercase marks. default false
+  force_write_shada = false,
+  -- how often (in ms) to redraw signs/recompute mark positions. 
+  -- higher values will have better performance but may cause visual lag, 
+  -- while lower values may cause performance penalties. default 150.
+  refresh_interval = 250,
+  -- sign priorities for each type of mark - builtin marks, uppercase marks, lowercase
+  -- marks, and bookmarks.
+  -- can be either a table with all/none of the keys, or a single number, in which case
+  -- the priority applies to all marks.
+  -- default 10.
+  sign_priority = { lower=10, upper=15, builtin=8, bookmark=20 },
+  -- disables mark tracking for specific filetypes. default {}
+  excluded_filetypes = {},
+  -- disables mark tracking for specific buftypes. default {}
+  excluded_buftypes = {},
+  -- marks.nvim allows you to configure up to 10 bookmark groups, each with its own
+  -- sign/virttext. Bookmarks can be used to group together positions and quickly move
+  -- across multiple buffers. default sign is '!@#$%^&*()' (from 0 to 9), and
+  -- default virt_text is "".
+  bookmark_0 = {
+    sign = "⚑",
+    virt_text = "",
+    -- explicitly prompt for a virtual line annotation when setting a bookmark from this group.
+    -- defaults to false.
+    annotate = false,
+  },
+  mappings = {
+    next = "nm",
+    next_bookmark = "nb",
+  }
+}
+
+
+    -- mx              Set mark x
+    -- m,              Set the next available alphabetical (lowercase) mark
+    -- m;              Toggle the next available mark at the current line
+    -- dmx             Delete mark x
+    -- dm-             Delete all marks on the current line
+    -- dm<space>       Delete all marks in the current buffer
+    -- m]              Move to next mark
+    -- m[              Move to previous mark
+    -- m:              Preview mark. This will prompt you for a specific mark to
+    --                 preview; press <cr> to preview the next mark.
+    --                
+    -- m[0-9]          Add a bookmark from bookmark group[0-9].
+    -- dm[0-9]         Delete all bookmarks from bookmark group[0-9].
+    -- m}              Move to the next bookmark having the same type as the bookmark under
+    --                 the cursor. Works across buffers.
+    -- m{              Move to the previous bookmark having the same type as the bookmark under
+    --                 the cursor. Works across buffers.
+    -- dm=             Delete the bookmark under the cursor.

@@ -22,15 +22,7 @@ return require('packer').startup(function(use)
         -- telescope.nvim is a required dependency
         requires = { "nvim-telescope/telescope.nvim" },
     })
-    use {
-        'crusj/bookmarks.nvim',
-        branch = 'main',
-        requires = { 'kyazdani42/nvim-web-devicons' },
-        config = function()
-            require("bookmarks").setup()
-            require("telescope").load_extension("bookmarks")
-        end
-    }
+    use {'chentoast/marks.nvim'}
     use {
         "folke/tokyonight.nvim",
         lazy = false,
