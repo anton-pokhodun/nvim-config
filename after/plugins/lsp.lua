@@ -4,7 +4,6 @@ local util = require("lspconfig.util")
 
 local servers = {
     'lua_ls',
-    'ruby_ls',
     'bashls', 
     'solargraph',
     'marksman',
@@ -50,32 +49,6 @@ require('mason-lspconfig').setup({
 require('lspconfig').dockerls.setup({})
 
 require('lspconfig').marksman.setup({})
-
-require('lspconfig').ruby_ls.setup({
-    default_config = {
-        single_file_support = true,
-        cmd = { "bundle", "exec", "ruby-lsp" },
-        filetypes = { "ruby" },
-        root_dir = util.root_pattern("Gemfile", ".git"),
-        init_options = {
-            -- enabledFeatures = enabled_features,
-            formatter = "auto",
-        },
-        settings = {},
-    },
-    commands = {
-        FormatRuby = {
-            function()
-                vim.lsp.buf.format({
-                    name = "ruby_ls",
-                    async = true,
-                })
-            end,
-            description = "Format using ruby-lsp",
-        },
-    },
-
-})
 
 lspconfig.solargraph.setup({})
 
