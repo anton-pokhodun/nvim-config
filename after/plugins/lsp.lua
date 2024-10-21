@@ -37,15 +37,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
-require('mason').setup({})
+-- require('mason').setup({})
 
-require('mason-lspconfig').setup({
-    ensure_installed = servers,
-    handlers = {
-        lsp_zero.default_setup,
-    },
-})
-
+-- require('mason-lspconfig').setup({
+--     ensure_installed = servers,
+--     handlers = {
+--         lsp_zero.default_setup,
+--     },
+-- })
+--
 require('lspconfig').dockerls.setup({})
 
 require('lspconfig').marksman.setup({})

@@ -5,6 +5,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
+    use 'mileszs/ack.vim'
     use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.5',
@@ -31,46 +32,27 @@ return require('packer').startup(function(use)
     }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
-    use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('vim-airline/vim-airline')
-    use('vim-airline/vim-airline-themes')
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         requires = {
-            {"williamboman/mason.nvim"},
-            {"williamboman/mason-lspconfig.nvim"},
             {"neovim/nvim-lspconfig"},
-            {"hrsh7th/cmp-buffer"},
+            -- {"hrsh7th/cmp-buffer"},
             {"hrsh7th/cmp-path"},
             {"hrsh7th/cmp-cmdline"},
             {"hrsh7th/nvim-cmp"},
-            {"hrsh7th/cmp-vsnip"},
-            {"hrsh7th/vim-vsnip"},
-            {"L3MON4D3/LuaSnip"},
+            -- {"hrsh7th/cmp-vsnip"},
+            -- {"hrsh7th/vim-vsnip"},
+            -- {"L3MON4D3/LuaSnip"},
             {"hrsh7th/cmp-nvim-lsp"} ,
             {"neovim/nvim-lspconfig"},
-            {"saadparwaiz1/cmp_luasnip"},
-            -- "SirVer/ultisnips",
-            -- "quannguyen30192/cmp-nvim-ultisnips",
-            {"dcampos/nvim-snippy"},
-            {"dcampos/cmp-snippy"},
-            { 'hrsh7th/cmp-nvim-lsp' },
+            -- {"saadparwaiz1/cmp_luasnip"},
+            -- {"dcampos/nvim-snippy"},
+            -- {"dcampos/cmp-snippy"},
         }
-    }
-    use {
-        "AckslD/nvim-neoclip.lua",
-        requires = {
-            { 'kkharji/sqlite.lua', module = 'sqlite' },
-            -- you'll need at least one of these
-            -- {'nvim-telescope/telescope.nvim'},
-            -- {'ibhagwan/fzf-lua'},
-        },
-        config = function()
-            require('neoclip').setup()
-        end,
     }
     use {
         'lewis6991/gitsigns.nvim',
@@ -79,7 +61,6 @@ return require('packer').startup(function(use)
             require('gitsigns').setup { current_line_blame = true }
         end
     }
-    use { 'ThePrimeagen/git-worktree.nvim' }
     use {
         "terrortylor/nvim-comment",
         cmd = "CommentToggle",
@@ -91,11 +72,9 @@ return require('packer').startup(function(use)
     use('preservim/nerdtree')
     use('ryanoasis/vim-devicons')
     use('Xuyuanp/nerdtree-git-plugin')
-
     -- Tabs
     use('romgrk/barbar.nvim')
     use('nvim-tree/nvim-web-devicons')
-
     use {
         'rmagatti/auto-session',
         config = function()
@@ -107,7 +86,6 @@ return require('packer').startup(function(use)
     }
     use('lovesegfault/beautysh')
     use('itspriddle/vim-shellcheck')
-
     -- Pair brackets
     use {
         "windwp/nvim-autopairs",

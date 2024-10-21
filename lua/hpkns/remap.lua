@@ -48,6 +48,9 @@ keymap("n", "<leader>q", ":BufferClose<CR>", { desc = "Close the buffer" })
 keymap("n", "<leader>gb", ":G blame<CR>", { desc = "Open git blame" })
 keymap("v", "<C-/>", ":CommentToggle<CR>", {})
 
+keymap("n", "<leader>c", ":close<CR>")
+keymap("n", "<leader>o", ":only<CR>")
+
 --Telescope
 keymap('n', '<leader>ff', builtin.find_files, {})
 keymap('n', '<leader>fh', builtin.help_tags, {})
@@ -77,9 +80,10 @@ keymap("n", "gu", "<cmd>diffget //2<CR>")
 keymap("n", "gh", "<cmd>diffget //3<CR>")
 --
 keymap("n", "<leader>do", ":DiffviewOpen<CR>")
-keymap("n", "<leader>dh", ":DiffviewFileHistory %<CR>")
+keymap("n", "<leader>dh", ":DiffviewFileHistory<CR>")
 keymap("n", "<leader>dm", ":DiffviewFileHistory --range=HEAD..origin/master<CR>")
 keymap("n", "<leader>dc", ":DiffviewClose<CR>")
 keymap("n", "<Tab><Tab>b", ":BookmarksListAll<CR>")
 keymap("n", "<Tab><Tab>m", ":MarksListAll<CR>")
+
 

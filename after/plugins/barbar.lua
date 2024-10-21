@@ -26,7 +26,7 @@ require'barbar'.setup {
       deleted = {enabled = true, icon = '-'},
     },
     filetype = {
-      custom_colors = false,
+      custom_colors = true,
       enabled = true,
     },
     separator = {left = '▎', right = ''},
@@ -41,10 +41,10 @@ require'barbar'.setup {
   },
   insert_at_end = false,
   insert_at_start = true,
-  maximum_padding = 5,
-  minimum_padding = 1,
-  maximum_length = 30,
-  minimum_length = 0,
+  -- maximum_padding = 5,
+  -- minimum_padding = 1,
+  -- maximum_length = 30,
+  -- minimum_length = 0,
   semantic_letters = true,
   sidebar_filetypes = {
     NvimTree = true,
