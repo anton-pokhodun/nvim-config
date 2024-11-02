@@ -1,6 +1,5 @@
 local lsp_zero = require('lsp-zero')
 local lspconfig = require('lspconfig')
-local util = require("lspconfig.util")
 
 local servers = {
     'lua_ls',
@@ -8,7 +7,8 @@ local servers = {
     'solargraph',
     'marksman',
     'dockerls',
-    'yamlls'
+    'yamlls',
+    'terraformls'
 }
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -47,6 +47,9 @@ require('mason-lspconfig').setup({
 })
 
 require('lspconfig').dockerls.setup({})
+
+
+require('lspconfig').terraformls.setup({})
 
 require('lspconfig').marksman.setup({})
 
