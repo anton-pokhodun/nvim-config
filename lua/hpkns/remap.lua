@@ -84,4 +84,5 @@ keymap("n", "<leader>dc", ":DiffviewClose<CR>")
 keymap("n", "<leader>dh", ":DiffviewFileHistory %<CR>")
 keymap("n", "<leader>ds", ":DiffviewFileHistory -g --range=stash<CR>")
 
-
+-- Lazygit
+keymap("n", "<leader>lg", ":LazyGit<CR>")

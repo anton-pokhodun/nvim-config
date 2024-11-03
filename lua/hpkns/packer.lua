@@ -122,4 +122,15 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
     use "sindrets/diffview.nvim"
+    -- nvim v0.7.2
+    use({
+        "kdheepak/lazygit.nvim",
+        requires = {
+            "nvim-telescope/telescope.nvim",
+            "nvim-lua/plenary.nvim",
+        },
+        config = function()
+            require("telescope").load_extension("lazygit")
+        end,
+    })
 end)
