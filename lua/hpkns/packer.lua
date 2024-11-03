@@ -121,7 +121,6 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
-    use "sindrets/diffview.nvim"
     -- nvim v0.7.2
     use({
         "kdheepak/lazygit.nvim",
