@@ -76,3 +76,7 @@ keymap('n', '<leader>cl', '<Cmd>close<CR>', opts)
 
 -- Lazygit
 keymap("n", "<leader>lg", ":LazyGit<CR>")
+
+--Search and replace
+utils.lnmap("<leader>rs", ":s/\\v", { silent = false, desc = "search and replace on line" })
+utils.lnmap("<leader>SS", ":%s/\\v", { silent = false, desc = "search and replace in file" })
