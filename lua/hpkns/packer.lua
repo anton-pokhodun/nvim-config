@@ -11,7 +11,8 @@ return require('packer').startup(function(use)
         requires = {
             'nvim-lua/plenary.nvim',
             'nvim-telescope/telescope-live-grep-args.nvim',
-            'sharkdp/fd'
+            'sharkdp/fd',
+            "dapc11/telescope-yaml.nvim",
         },
         config = function()
             require("telescope").load_extension("live_grep_args")
@@ -48,8 +49,6 @@ return require('packer').startup(function(use)
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         requires = {
-            {"williamboman/mason.nvim"},
-            {"williamboman/mason-lspconfig.nvim"},
             {"neovim/nvim-lspconfig"},
             {"hrsh7th/cmp-buffer"},
             {"hrsh7th/cmp-path"},
@@ -152,4 +151,8 @@ return require('packer').startup(function(use)
         end,
         requires = {'nvim-tree/nvim-web-devicons'}
     }
+    use {"towolf/vim-helm"} 
+    use { "williamboman/mason.nvim" }
+    use {"williamboman/mason-lspconfig.nvim"}
+
 end)
