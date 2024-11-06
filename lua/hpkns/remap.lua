@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 local builtin = require('telescope.builtin')
+local utils = require "hpkns.utils"
 
 keymap("n", "<leader>nt", ":NERDTreeToggle<CR>")
 keymap("n", "<leader>nf", ":NERDTreeFind<CR>", { desc = "Find currently opened file in directory tree" })

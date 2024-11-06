@@ -1,5 +1,6 @@
 package.path = "/Users/antonpokhodun/.config/nvim/?.lua;"
 
+require("hpkns.autocommands")
 require("hpkns.packer")
 require("hpkns.remap")
 require("hpkns.set")
