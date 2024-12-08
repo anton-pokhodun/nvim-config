@@ -66,6 +66,11 @@ lspconfig.helm_ls.setup{
     }
 }
 
+lspconfig.terraformls.setup {
+    on_attach = def.on_attach,
+    capabilities = def.capabilities
+}
+
 -- TODO move it elsewhere
 -- PROJECT: lsp_lines
 -- When using lsp_lines, this needs to be disabled
