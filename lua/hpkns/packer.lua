@@ -18,6 +18,11 @@ return require('packer').startup(function(use)
             require("telescope").load_extension("live_grep_args")
         end
     }
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
     use({
         "princejoogie/dir-telescope.nvim",
         -- telescope.nvim is a required dependency
