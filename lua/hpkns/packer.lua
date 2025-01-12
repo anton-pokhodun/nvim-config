@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
             require("telescope").load_extension("live_grep_args")
         end
     }
+    use {'christoomey/vim-tmux-navigator'}
     use {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
@@ -45,10 +46,8 @@ return require('packer').startup(function(use)
     }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
-    use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
-    use('vim-airline/vim-airline')
     use('vim-airline/vim-airline-themes')
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -139,9 +138,6 @@ return require('packer').startup(function(use)
     use({
         'MeanderingProgrammer/render-markdown.nvim',
         after = { 'nvim-treesitter' },
-        requires = { 'echasnovski/mini.nvim', opt = true }, -- if you use the mini.nvim suite
-        -- requires = { 'echasnovski/mini.icons', opt = true }, -- if you use standalone mini plugins
-        -- requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
         config = function()
             require('render-markdown').setup({})
         end,

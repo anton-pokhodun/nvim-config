@@ -43,11 +43,10 @@ keymap("n", "<C-S-Left>", ":vertical resize +2<CR>", { desc = "Resize Vertical S
 keymap("n", "<F9>", ":!%:p<CR>", { desc = "Execute current bash file" })
 
 -- Commenter Keybinding
-keymap("n", "<C-/>", ":CommentToggle<CR>", {})
+keymap({"n", "v"}, "<F10>", ":CommentToggle<CR>", {})
 keymap("n", "<leader><leader>", ":wa<CR>", { desc = "Save all" })
 keymap("n", "<leader>q", ":BufferClose<CR>", { desc = "Close the buffer" })
 keymap("n", "<leader>gb", ":G blame<CR>", { desc = "Open git blame" })
-keymap("v", "<C-/>", ":CommentToggle<CR>", {})
 
 --Telescope
 keymap('n', '<leader>ff', builtin.find_files, {})
@@ -65,8 +64,8 @@ keymap("n", "<leader>fr", [[<Cmd>lua require'telescope.builtin'.resume()<CR>]], 
 keymap("n", "<leader>fo", builtin.oldfiles, { noremap = true, silent = true })
 
 -- Tabs
-keymap('n', '<C-,>', '<Cmd>BufferPrevious<CR>', opts)
-keymap('n', '<C-;>', '<Cmd>BufferNext<CR>', opts)
+keymap('n', '<F8>', '<Cmd>BufferPrevious<CR>', opts)
+keymap('n', '<F9>', '<Cmd>BufferNext<CR>', opts)
 
 -- Close buffer
 keymap('n', '<C-w>', '<Cmd>BufferClose<CR>', opts)
