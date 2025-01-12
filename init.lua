@@ -1,4 +1,4 @@
-package.path = "/Users/antonpokhodun/.config/nvim/?.lua;"
+package.path = package.path .. ";" .. vim.env.HOME .. "/.config/nvim/lua/?.lua"
 
 require("hpkns.autocommands")
 require("hpkns.packer")
