@@ -13,7 +13,7 @@ vim.g.undotree_DiffAutoOpen=1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 vim.opt.guicursor = ""
-vim.cmd[[colorscheme tokyonight-moon]]
+-- vim.cmd[[colorscheme tokyonight-moon]]
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"

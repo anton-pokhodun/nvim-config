@@ -38,12 +38,7 @@ return require('packer').startup(function(use)
             require("telescope").load_extension("bookmarks")
         end
     }
-    use {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {},
-    }
+    use { "catppuccin/nvim", as = "catppuccin" }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('mbbill/undotree')
