@@ -4,6 +4,10 @@ local opts = { noremap = true, silent = true }
 local builtin = require('telescope.builtin')
 local utils = require "hpkns.utils"
 
+-- Unbind F1
+keymap('n', '<F1>', '<Nop>', { noremap = true, silent = true })
+keymap('i', '<F1>', '<Nop>', { noremap = true, silent = true })
+
 keymap("n", "<leader>nt", ":NERDTreeToggle<CR>")
 keymap("n", "<leader>nf", ":NERDTreeFind<CR>", { desc = "Find currently opened file in directory tree" })
 
