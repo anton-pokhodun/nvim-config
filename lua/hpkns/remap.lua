@@ -10,6 +10,9 @@ keymap("n", "<leader>nf", ":NERDTreeFind<CR>", { desc = "Find currently opened f
 -- Delete work backward
 keymap("n", "dw", 'vb"_d')
 
+-- Paste word without overwriting register
+keymap("v", "p", '"_dP')
+
 -- Select all
 keymap("n", "<C-a>", "gg<S-v>G")
 
@@ -79,7 +82,6 @@ keymap("n", "<leader>lg", ":LazyGit<CR>")
 --Search and replace
 utils.lnmap("<leader>rs", ":s/\\v", { silent = false, desc = "search and replace on line" })
 utils.lnmap("<leader>SS", ":%s/\\v", { silent = false, desc = "search and replace in file" })
-
 
 local harpoon = require("harpoon")
 
