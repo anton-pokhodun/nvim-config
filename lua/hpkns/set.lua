@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 vim.g.diagnostics_active = false
 vim.diagnostic.disable()
 
--- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.WebDevIconsUnicodeDecorateFolderNodes = 1
@@ -62,4 +61,6 @@ vim.api.nvim_create_autocmd(
 )
 vim.api.nvim_create_augroup("ActionOnClose", {})
 -- vim.api.nvim_create_autocmd("BufEnter", { command = "autocmd VimEnter * NERDTree", group = "ActionOnClose"})
+
+vim.opt.guicursor = "i-ci-ve:ver25,r-cr-o:hor20"
 
