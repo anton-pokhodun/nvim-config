@@ -29,15 +29,6 @@ return require('packer').startup(function(use)
         -- telescope.nvim is a required dependency
         requires = { "nvim-telescope/telescope.nvim" },
     })
-    use {
-        'crusj/bookmarks.nvim',
-        branch = 'main',
-        requires = { 'kyazdani42/nvim-web-devicons' },
-        config = function()
-            require("bookmarks").setup()
-            require("telescope").load_extension("bookmarks")
-        end
-    }
     use { "catppuccin/nvim", as = "catppuccin" }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
@@ -149,5 +140,4 @@ return require('packer').startup(function(use)
     use {"towolf/vim-helm"} 
     use { "williamboman/mason.nvim" }
     use {"williamboman/mason-lspconfig.nvim"}
-
 end)
